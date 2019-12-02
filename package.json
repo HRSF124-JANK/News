@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "webpack -w -d",
-    "start": "nodemon --inspect ./server/server.js"
+    "start": "nodemon --inspect ./server/server.js",
+    "db:setup": "node ./server/db/seed.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"

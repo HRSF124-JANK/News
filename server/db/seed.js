@@ -9,20 +9,19 @@ const createNews = () => {
   let newsObjects = []
   console.log('creating new collections...');
   return companyNames.then( (cN) => {
+
+
     Object.entries(cN).forEach( (entry, idx) => {
-      let articleNumber = Math.floor(Math.random() * 10);
+
+
+      let articleNumber = Math.floor(Math.random() * 8) + 1;
       console.log(`creating ${articleNumber} news articles for ${entry[0]}`)
       for (var i = 0; i < articleNumber; i++) {
-        let newNews = {
+        let companyInfo = {
           company: entry[0],
-          symbol: entry[1],
-          date: Faker.date.past(),
-          source: "url",
-          title: Faker.lorem.words,
-          thumbnail: Faker.image.imageUrl,
-          body: Faker.lorem.paragraphs,
-          views: Faker.helpers.randomNumber
+          symbol: entry[1]
         }
+        let newNews = {...companyInfo, ...fakeData}
         newsObjects.push(newNews)
       }
     })

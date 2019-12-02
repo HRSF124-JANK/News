@@ -6,7 +6,7 @@ class App extends React.Component {
     super()
   }
 
-  
+
   render() {
     return (
       <div>asdf</div>
@@ -14,4 +14,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+// ReactDOM.render(<App />, document.getElementById('app'))
+export default App

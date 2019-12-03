@@ -45,7 +45,7 @@ describe('News collection should', () => {
 
   })
 })
-// 
+// this is supposed to test seed function
 // describe('News collection seed function', () => {
 //   // Think about this more. which db is it hitting?
 //   it('should properly store an appropriate amount of models with correct data', async (done) => {

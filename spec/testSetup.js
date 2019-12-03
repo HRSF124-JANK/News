@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const path = require('path');
 const News = require(path.resolve(__dirname, '../server/db/news.js'));
+import Adapter from 'enzyme-adapter-react-16';
+import Enzyme, { shallow } from 'enzyme';
+Enzyme.configure({ adapter: new Adapter() });
 
 beforeEach( (done) => {
 

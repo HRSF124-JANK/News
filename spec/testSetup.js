@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const News = require('../server/db/news.js');
+const path = require('path');
+const News = require(path.resolve(__dirname, '../server/db/news.js'));
 
 beforeEach( (done) => {
 
@@ -24,10 +25,10 @@ beforeEach( (done) => {
 });
 
 afterEach((done) => {
-  mongoose.disconnect();
   return done();
 });
 
 afterAll( (done) => {
+  mongoose.disconnect();
   return done();
 });

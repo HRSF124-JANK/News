@@ -52,3 +52,5 @@ const dbSetup = () => {
 }
 
 dbSetup();
+
+module.exports = dbSetup;

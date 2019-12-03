@@ -2,7 +2,7 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import NewsArticle from '../../../client/components/newsArticle.jsx';
+import { NewsArticle , Container, Header, Thumbnail } from '../../../client/components';
 
 
 describe('News Article Component', () => {

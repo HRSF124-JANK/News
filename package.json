@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack -w -d",
     "start": "nodemon --inspect ./server/server.js",
-    "db:setup": "node ./server/db/seed.js",
+    "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",
     "test": "jest --coverage"
   },
   "repository": {

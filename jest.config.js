@@ -6,5 +6,6 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
   },
   moduleFileExtensions: ["js", "jsx"],
-  moduleDirectories: ["node_modules"]
+  moduleDirectories: ["node_modules"],
+  setupFilesAfterEnv: ["<rootDir>/spec/testSetup.js"]
 }

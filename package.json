@@ -33,6 +33,7 @@
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",

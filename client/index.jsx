@@ -25,18 +25,26 @@ const Inner = styled.div`
 class App extends React.Component {
   constructor() {
     super()
+
+    this.state = {
+      data: []
+    }
   }
 
-  // componentDidMount() {
-  //   fetch('/getData')
-  //     .then((repsonse) => {
-  //       debugger
-  //     })
-  //
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // }
+  componentDidMount() {
+    fetch('/getData?company=MMM')
+      .then((response) => {
+        return response.json()
+      })
+      .then((body) => {
+        this.setState({
+          data: body
+        })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 
   render() {
     return (
@@ -44,7 +52,7 @@ class App extends React.Component {
         <GlobalStyle />
         <Inner>
         <Title>News</Title>
-        <Container />
+        <Container data={this.state.data} />
         </Inner>
       </Body>
     )

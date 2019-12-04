@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+import moment from 'moment';
 
 const Head = styled.div`
   margin-top: -4px;
@@ -21,12 +22,13 @@ const Date = styled.span`
   line-height: 19px;
 `
 const Header = (props) => {
+  let { source, date } = props;
   return (
     <Head>
       <span className="bold">
-        <Source>Benzinga</Source>
+        <Source>{source}</Source>
       </span>
-      <Date>Dec 2</Date>
+      <Date>{moment(date).format('MMM D')}</Date>
     </Head>
   )
 }

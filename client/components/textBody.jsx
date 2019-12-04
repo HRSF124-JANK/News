@@ -38,13 +38,14 @@ const Body = styled.div`
 `
 
 const TextBody = (props) => {
+  let { body, title } = props
   return (
     <Box>
       <Title>
-        <Spacer>What The Sprint, T-Mobile Merger Trial Means For Investors</Spacer>
+        <Spacer>{title}</Spacer>
       </Title>
       <Body>
-        asdfadsjf;aksdjf;laksjdf;lkasdjf;lkajsfjasdlkfjasdkjfakdjf;askdf
+        {body}
       </Body>
     </Box>
   )

@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-// import DIN from './fonts/DINPro-Mediumtr.ttf';
+import path from 'path';
+
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "DIN Pro";
+    src: url(${path.resolve('./fonts/DINPro-Medium.ttf')}) format('truetype');
+  }
   body {
     font-family: Arial
   }

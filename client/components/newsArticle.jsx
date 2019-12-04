@@ -38,18 +38,20 @@ const Image = styled.img`
 `
 
 const NewsArticle = (props) => {
+  let { source, body, title, thumbnail, views, date } = !!props.title ? props : ""
+
   return(
     <Box>
       <Text>
-        <Header />
-        <TextBody />
+        <Header source={source} date={date} />
+        <TextBody title={title} body={body} />
         <ViewsBox>
-          <Icon />{"916"}
+          <Icon />{views}
         </ViewsBox>
       </Text>
 
       <ImageBox>
-        <Image src="https://images.robinhood.com/Bwdg3qM4Y9AT6a2X9-2d1DJ0rec/aHR0cHM6Ly9pbWFnZXMucm9iaW5ob29kLmNvbS9EdkJMZUNvLWN2UnlxLVAySGpsYUZ4N0lMMkEvYUhSMGNITTZMeTlqWkc0eUxtSmxibnBwYm1kaExtTnZiUzltYVd4bGN5OXBiV0ZuWldOaFkyaGxMMko2TWw5dmNHVnVaM0poY0doZmJXVjBZVjlwYldGblpWODBNREI0TXpBd0wybHRZV2RsY3k5emRHOXllUzh5TURFeUwzTndjbWx1ZEY5eVpYUmhhV3hmYzNSdmNtVmZabkp2Ym5SaFoyVmZibVYzWDIxbGVHbGpiMTh6WHpRdWFuQm4" />
+        <Image src={thumbnail} />
       </ImageBox>
 
     </Box>

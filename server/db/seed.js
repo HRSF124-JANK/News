@@ -9,11 +9,7 @@ const createNews = () => {
   let newsObjects = []
   console.log('creating new collections...');
   return companyNames.then( (cN) => {
-
-
     Object.entries(cN).forEach( (entry, idx) => {
-
-
       let articleNumber = Math.floor(Math.random() * 8) + 1;
       console.log(`creating ${articleNumber} news articles for ${entry[0]}`)
       for (var i = 0; i < articleNumber; i++) {
@@ -51,4 +47,4 @@ const dbSetup = () => {
 
 }
 
-dbSetup();
+module.exports = dbSetup;

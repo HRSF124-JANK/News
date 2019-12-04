@@ -6,12 +6,13 @@ class App extends React.Component {
     super()
   }
 
-  
+
   render() {
     return (
-      <div>asdf</div>
+      <div>asdffff</div>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+// ReactDOM.render(<App />, document.getElementById('app'))
+export default App

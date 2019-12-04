@@ -6,7 +6,7 @@
     "build": "webpack -w -d",
     "start": "nodemon --inspect ./server/app.js",
     "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",
-    "test": "jest --coverage"
+    "test": "jest --coverage --color"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "file-loader": "^5.0.2",
     "mongodb": "^3.3.5",
     "mongoose": "^5.7.13",
     "react": "^16.12.0",

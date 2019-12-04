@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Container } from './components';
-import styled from 'styled-components';
+import styled from 'styled-components'
+import GlobalStyle from './globalStyle';
 
 const Title = styled.div`
   color: #fff;
@@ -40,6 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <Body>
+        <GlobalStyle />
         <Inner>
         <Title>News</Title>
         <Container />

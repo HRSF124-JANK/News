@@ -16,6 +16,14 @@ module.exports = {
             plugins: ["babel-plugin-styled-components"]
           }
         }
+      },
+      {
+        use: {
+          {
+            loader: 'file-loader',
+            test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+          }
+        }
       }
     ]
   },

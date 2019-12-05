@@ -8,8 +8,20 @@ import { NewsArticle , Container, Header, Thumbnail } from '../../../client/comp
 
 describe('Container', () => {
   it('should render with no problems', () => {
-    // TODO finish when buidling  frontend
-    const component = renderer.create(<Container />);
+    const component = renderer.create(
+      <Container
+        data={[
+          {
+            source: "google",
+            body: "lorem ipsum",
+            title: "Twitter",
+            thumbnail: "image.url",
+            views: 932,
+            date: Date.now
+          }
+        ]
+      }  />
+    );
     expect(component).toMatchSnapshot();
   })
 

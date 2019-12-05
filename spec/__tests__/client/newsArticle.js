@@ -1,35 +1,35 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { NewsArticle , Container, Header, Thumbnail } from '../../../client/components';
 
 
 describe('News Article Component', () => {
+  const component = mount(<NewsArticle views={932} body="lorem ipsum" source="google" date={Date.now()} />)
   it('should render with no problems', () => {
-    const component = renderer.create(<NewsArticle />)
-    expect(component).toMatchSnapshot();
+    const snapshot = renderer.create(<NewsArticle />)
+    expect(snapshot).toMatchSnapshot();
   })
 
   it('should render child components', () => {
-    // TODO during frontend
-    expect(component.find(Header)).not.toBeNull()
-    expect(component.find(Thumbnail)).not.toBeNull()
+    expect(component.find('Header')).not.toBeNull()
+    expect(component.find('Thumbnail')).not.toBeNull()
   })
 
   it('should render views', () => {
-    expect(component.find('.views').html()).toBeGreaterThan(100)
+    expect(component.find('NewsArticle').props().views).toBe(932)
   })
 
   it('should have body text', () => {
-    expect(component.props().body).toBeDefined();
+    expect(component.find('NewsArticle').props().body).toBeDefined();
   })
 
   it('should have a source', () => {
-    expect(component.props().source).toBeDefined();
+    expect(component.find('NewsArticle').props().source).toBeDefined();
   })
 
   it('should have a recently added timestamp', () => {
-    expect(component.props().date).toBeDefined();
+    expect(component.find('NewsArticle').props().date).toBeDefined();
   })
 })

@@ -2,52 +2,46 @@
 
 exports[`News Article Component should render with no problems 1`] = `
 <div
-  className="sc-bwzfXH kyVHhI"
+  className="sc-htpNat hYBESW"
 >
   <div
-    className="sc-htpNat cZhURA"
+    className="sc-bxivhb iClDYI"
   >
     <div
-      className="sc-bZQynM evQXcO"
+      className="sc-EHOje dCFzmG"
     >
       <span
         className="bold"
       >
         <span
-          className="sc-gzVnrw gftquo"
-        >
-          Benzinga
-        </span>
+          className="sc-bZQynM iLwGJq"
+        />
       </span>
       <span
-        className="sc-htoDjs gbfbMp"
+        className="sc-gzVnrw LCHQx"
       >
-        Dec 2
+        Dec 4
       </span>
     </div>
     <div
-      className="sc-dnqmqq kSrwll"
+      className="sc-htoDjs ePGLu"
     >
       <h3
-        className="sc-gZMcBi MHzyf"
+        className="sc-iwsKbI hjgvjT"
       >
         <div
-          className="sc-iwsKbI kQqgke"
-        >
-          What The Sprint, T-Mobile Merger Trial Means For Investors
-        </div>
+          className="sc-dnqmqq yzksM"
+        />
       </h3>
       <div
-        className="sc-gqjmRU gfjrzb"
-      >
-        asdfadsjf;aksdjf;laksjdf;lkasdjf;lkajsfjasdlkfjasdkjfakdjf;askdf
-      </div>
+        className="sc-gZMcBi hKQuOj"
+      />
     </div>
     <div
-      className="sc-bxivhb cVwwVX"
+      className="sc-ifAKCX eCEovD"
     >
       <svg
-        className="sc-VigVT cHysEU"
+        className="sc-gqjmRU bmDPVf"
         fill="8c8c8e"
         height="11"
         viewBox="0 0 14 11"
@@ -58,15 +52,13 @@ exports[`News Article Component should render with no problems 1`] = `
           fillRule="evenodd"
         />
       </svg>
-      916
     </div>
   </div>
   <div
-    className="sc-ifAKCX jpWGFz"
+    className="sc-VigVT hKbwGv"
   >
     <img
-      className="sc-EHOje kcmjhv"
-      src="https://images.robinhood.com/Bwdg3qM4Y9AT6a2X9-2d1DJ0rec/aHR0cHM6Ly9pbWFnZXMucm9iaW5ob29kLmNvbS9EdkJMZUNvLWN2UnlxLVAySGpsYUZ4N0lMMkEvYUhSMGNITTZMeTlqWkc0eUxtSmxibnBwYm1kaExtTnZiUzltYVd4bGN5OXBiV0ZuWldOaFkyaGxMMko2TWw5dmNHVnVaM0poY0doZmJXVjBZVjlwYldGblpWODBNREI0TXpBd0wybHRZV2RsY3k5emRHOXllUzh5TURFeUwzTndjbWx1ZEY5eVpYUmhhV3hmYzNSdmNtVmZabkp2Ym5SaFoyVmZibVYzWDIxbGVHbGpiMTh6WHpRdWFuQm4"
+      className="sc-jTzLTM hnpDpi"
     />
   </div>
 </div>

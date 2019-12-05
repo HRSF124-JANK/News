@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import { Header, TextBody, Icon } from './index.js'
+import { Header, TextBody, Icon, Thumbnail } from './index.js'
 
 const Box = styled.div`
   border-radius: 4px;
@@ -23,20 +23,6 @@ const ViewsBox = styled.div`
   color: #8c8c8e;
   fill: #8c8c8e;
 `
-
-const ImageBox = styled.div`
-  border-radius: 4px;
-  flex-shrink: 0;
-  height: 134px;
-  width: 196px;
-`
-
-const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`
-
 const NewsArticle = (props) => {
   let { source, body, title, thumbnail, views, date } = !!props.title ? props : ""
 
@@ -50,10 +36,7 @@ const NewsArticle = (props) => {
         </ViewsBox>
       </Text>
 
-      <ImageBox>
-        <Image src={thumbnail} />
-      </ImageBox>
-
+      <Thumbnail image={thumbnail} />
     </Box>
   )
 }

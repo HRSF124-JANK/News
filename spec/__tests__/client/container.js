@@ -22,19 +22,13 @@ describe('Container', () => {
         title: "article2"
       }
     ]
-    const component = shallow(<Container articles={articles} />)
-    expect(component.find(NewsArticle)).to.have.lengthOf(2)
+    const component = mount(<Container data={articles} />)
+    expect(component.find('NewsArticle').length).toBe(2)
   })
 
   it('renders other static components', () => {
-    // TODO finish when buidling frontend
     const component = mount(<Container />)
 
     expect(component.find(NewsArticle)).not.toBeNull()
-  })
-
-  it('should have a "Show More" button', () => {
-    // TODO finish when buidling  frontend
-    expect(component.find('.show-more')).toBeDefined();
   })
 })

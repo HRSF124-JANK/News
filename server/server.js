@@ -9,9 +9,8 @@ app.use('/', express.static(path.resolve(__dirname, '../public')))
 app.get('/getData', (req, res) => {
   let symbol = req.url.split('=')[1]
   News.find({symbol: symbol}, (err, data) => {
-    if (err) {
+    if (err || data.length === 0) {
       res.writeHead(404)
-      throw err
       res.end()
     } else {
       res.writeHead(200)

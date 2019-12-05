@@ -2,21 +2,19 @@
 
 exports[`Header Component should render with no problems 1`] = `
 <div
-  className="sc-bZQynM evQXcO"
+  className="sc-EHOje dCFzmG"
 >
   <span
     className="bold"
   >
     <span
-      className="sc-gzVnrw gftquo"
-    >
-      Benzinga
-    </span>
+      className="sc-bZQynM iLwGJq"
+    />
   </span>
   <span
-    className="sc-htoDjs gbfbMp"
+    className="sc-gzVnrw LCHQx"
   >
-    Dec 2
+    Dec 4
   </span>
 </div>
 `;

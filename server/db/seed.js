@@ -17,7 +17,7 @@ const createNews = () => {
           company: entry[0],
           symbol: entry[1]
         }
-        let newNews = {...companyInfo, ...fakeData}
+        let newNews = {...companyInfo, ...fakeData()}
         newsObjects.push(newNews)
       }
     })

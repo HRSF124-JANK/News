@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thumbnail component should render with no problems 1`] = `
+<div
+  className="sc-VigVT hKbwGv"
+>
+  <img
+    className="sc-jTzLTM hnpDpi"
+  />
+</div>
+`;

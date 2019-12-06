@@ -6,7 +6,8 @@
     "build": "webpack -w -d",
     "start": "nodemon --inspect ./server/app.js",
     "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",
-    "test": "jest --coverage"
+    "test": "jest --coverage --color",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -22,16 +23,22 @@
   "dependencies": {
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "file-loader": "^5.0.2",
+    "moment": "^2.24.0",
     "mongodb": "^3.3.5",
     "mongoose": "^5.7.13",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "ttf-loader": "^1.0.2",
+    "url-loader": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",

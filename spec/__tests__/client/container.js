@@ -8,8 +8,20 @@ import { NewsArticle , Container, Header, Thumbnail } from '../../../client/comp
 
 describe('Container', () => {
   it('should render with no problems', () => {
-    // TODO finish when buidling  frontend
-    const component = renderer.create(<Container />);
+    const component = renderer.create(
+      <Container
+        data={[
+          {
+            source: "google",
+            body: "lorem ipsum",
+            title: "Twitter",
+            thumbnail: "image.url",
+            views: 932,
+            date: Date.now
+          }
+        ]
+      }  />
+    );
     expect(component).toMatchSnapshot();
   })
 
@@ -22,19 +34,13 @@ describe('Container', () => {
         title: "article2"
       }
     ]
-    const component = shallow(<Container articles={articles} />)
-    expect(component.find(NewsArticle)).to.have.lengthOf(2)
+    const component = mount(<Container data={articles} />)
+    expect(component.find('NewsArticle').length).toBe(2)
   })
 
   it('renders other static components', () => {
-    // TODO finish when buidling frontend
     const component = mount(<Container />)
 
     expect(component.find(NewsArticle)).not.toBeNull()
-  })
-
-  it('should have a "Show More" button', () => {
-    // TODO finish when buidling  frontend
-    expect(component.find('.show-more')).toBeDefined();
   })
 })

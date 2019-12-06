@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should render with no problems 1`] = `
+<div
+  className="sc-EHOje dCFzmG"
+>
+  <span
+    className="bold"
+  >
+    <span
+      className="sc-bZQynM iLwGJq"
+    />
+  </span>
+  <span
+    className="sc-gzVnrw LCHQx"
+  >
+    Dec 4
+  </span>
+</div>
+`;

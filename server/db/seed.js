@@ -14,6 +14,7 @@ const createNews = () => {
       console.log(`creating ${articleNumber} news articles for ${entry[0]}`)
       for (var i = 0; i < articleNumber; i++) {
         let companyInfo = {
+          id: idx + 1,
           company: entry[0],
           symbol: entry[1]
         }

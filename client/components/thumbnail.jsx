@@ -15,11 +15,10 @@ const Image = styled.img`
   object-fit: cover;
 `
 
-const Thumbnail = (props) => {
-  let { thumbnail } = props
+const Thumbnail = ({image}) => {
   return (
     <ImageBox>
-      <Image src={thumbnail} />
+      <Image src={image} />
     </ImageBox>
 
   )

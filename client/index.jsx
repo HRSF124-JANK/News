@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Container } from './components';
+import { Container, Modal } from './components';
 import styled from 'styled-components'
 import GlobalStyle from './globalStyle';
 
@@ -27,16 +27,28 @@ class App extends React.Component {
     super()
 
     this.state = {
-      data: []
+      data: [],
+      showModal: false,
+      modalIdx: null
     }
+
+    this.toggleModal = this.toggleModal.bind(this)
+  }
+
+  toggleModal(idx) {
+    this.setState({
+      showModal: !this.state.showModal,
+      modalIdx: idx
+    })
   }
 
   componentDidMount() {
-    fetch('/getData?company=MMM')
+    fetch(`/getData${window.location.search}`)
       .then((response) => {
         return response.json()
       })
       .then((body) => {
+        console.log(body)
         this.setState({
           data: body
         })
@@ -52,8 +64,16 @@ class App extends React.Component {
         <GlobalStyle />
         <Inner>
         <Title>News</Title>
-        <Container data={this.state.data} />
+        <Container data={this.state.data} modalHandler={this.toggleModal} />
         </Inner>
+        {this.state.showModal && (
+          <Modal
+            id="modal"
+            isOpen={this.state.showModal}
+            onClose={this.toggleModal}
+            article={this.state.data[this.state.modalIdx]}
+          />
+        )}
       </Body>
     )
   }

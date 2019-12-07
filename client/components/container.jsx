@@ -13,6 +13,7 @@ const Box = styled.div`
 `
 
 const A = styled.a`
+  cursor: pointer;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -44,7 +45,7 @@ const Container = (props) => {
                 thumbnail={data.thumbnail}
                 views={data.views}
                 date={data.date} />
-                <A href="https://google.com" target="_blank" rel="nofollow noopener" />
+                <A onClick={() => props.modalHandler(idx)} target="_blank" rel="nofollow noopener" />
             </Box>
           )
         })

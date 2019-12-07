@@ -4,6 +4,7 @@ mongoose.Promise = global.Promise;
 
 const newsSchema = new mongoose.Schema({
   company: String,
+  id: Number,
   symbol: String,
   date: Date,
   source: String,

@@ -72,6 +72,7 @@ class App extends React.Component {
             isOpen={this.state.showModal}
             onClose={this.toggleModal}
             article={this.state.data[this.state.modalIdx]}
+            idx={this.state.modalIdx}
           />
         )}
       </Body>

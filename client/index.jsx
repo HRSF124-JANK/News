@@ -43,7 +43,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/getData${window.location.search}`)
+    fetch(`/news/getData${window.location.search}`)
       .then((response) => {
         return response.json()
       })

@@ -86,7 +86,7 @@ class Modal extends React.Component {
   componentDidMount() {
     setTimeout(() => this.setState({ fadeType: "in" }), 0);
     let data = {idx: this.props.idx}
-    fetch(`/addViews${window.location.search}`, {
+    fetch(`/news/addViews${window.location.search}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

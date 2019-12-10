@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack -w -d",
+    "build:watch": "webpack -w -d",
+    "build": "webpack",
     "start": "nodemon --inspect ./server/app.js",
     "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",
     "test": "jest --coverage --color",

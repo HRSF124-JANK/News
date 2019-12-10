@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(express.urlencoded({extended: true}))
 app.use('/', express.static(path.resolve(__dirname, '../public')))
-app.get('/getData', (req, res) => {
+app.get('/news/getData', (req, res) => {
   News.find({id: req.query.id}, (err, data) => {
     if (err || data.length === 0) {
       res.writeHead(404)
@@ -19,7 +19,7 @@ app.get('/getData', (req, res) => {
   })
 })
 
-app.post('/addViews', (req,res) => {
+app.post('/news/addViews', (req,res) => {
   News.find({id: req.query.id}, (err, data) => {
     if (err || data.length === 0) {
       res.writeHead(404)

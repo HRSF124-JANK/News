@@ -80,4 +80,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('news'))
+ReactDOM.render(<App />, document.getElementById('News'))

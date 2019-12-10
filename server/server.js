@@ -3,8 +3,10 @@ const path = require('path')
 const app = express()
 const News = require('./db/news.js');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 app.use(bodyParser.json())
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use('/', express.static(path.resolve(__dirname, '../public')))
 app.get('/news/getData', (req, res) => {

@@ -10,7 +10,8 @@ app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use('/', express.static(path.resolve(__dirname, '../public')))
 app.get('/news/getData', (req, res) => {
-  News.find({id: req.query.id}, (err, data) => {
+  let id = !!req.query.id ? req.query.id : 1
+  News.find({id: id}, (err, data) => {
     if (err || data.length === 0) {
       res.writeHead(404)
       res.end()

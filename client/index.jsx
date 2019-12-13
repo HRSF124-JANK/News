@@ -11,14 +11,19 @@ const Title = styled.div`
   letter-spacing: -0.14px;
   line-height: 30px;
   border-bottom: 1px solid #0e0d0d;
+  width: 676px;
   padding-bottom: 16px;
 `;
 
 const Body = styled.div`
   display: flex;
+  width: 676px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-top: 75px;
 `
 const Inner = styled.div`
-  width: 750px;
+  width: 676px;
   margin: 0 auto;
 `
 

@@ -5,12 +5,31 @@ import styled from 'styled-components'
 import GlobalStyle from './globalStyle';
 
 const Title = styled.div`
-  color: #fff;
+  color: ${props => {
+    const d = new Date();
+    const totalMinutes = (d.getHours() * 60) + d.getMinutes();
+    let background = '';
+    if (totalMinutes < 360 || totalMinutes >= 900) {
+      return '#fff;'
+    } else {
+      return 'rgb(23, 23, 24);'
+    }
+    }
+  };
   font-size: 26px;
   font-weight: 500;
   letter-spacing: -0.14px;
   line-height: 30px;
-  border-bottom: 1px solid #0e0d0d;
+  border-bottom: 1px solid ${props => {
+    const d = new Date();
+    const totalMinutes = (d.getHours() * 60) + d.getMinutes();
+    let background = '';
+    if (totalMinutes < 360 || totalMinutes >= 900) {
+      return '#0e0d0d;'
+    } else {
+      return 'rgba(237, 237, 237, 0.5);'
+    }
+  }}
   width: 676px;
   padding-bottom: 16px;
 `;
@@ -58,6 +77,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    const d = new Date();
+    const totalMinutes = (d.getHours() * 60) + d.getMinutes();
+    let background = '';
+    if (totalMinutes < 360 || totalMinutes >= 900) {
+      document.body.style.background = '#1b1b1d';
+    } else {
+      document.body.style.background = 'white';
+    }
     fetch(`/news/getData${window.location.search}`)
       .then((response) => {
         return response.json()

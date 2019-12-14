@@ -10,7 +10,17 @@ const Head = styled.div`
 `
 
 const Source = styled.span`
-  color: #fff;
+color: ${props => {
+  const now = moment();
+  const totalMinutes = (now.hours() * 60) + now.minutes();
+  let background = '';
+  if (totalMinutes < 360 || totalMinutes >= 900) {
+    return '#fff;'
+  } else {
+    return 'rgb(23, 23, 24);'
+  }
+  }
+};
 `
 
 const Date = styled.span`

@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build:watch": "webpack -w -d",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "start:dev": "nodemon --inspect=9230 ./server/app.js",
     "start": "NODE_ENV=production node ./server/app.js",
     "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",

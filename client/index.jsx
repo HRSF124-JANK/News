@@ -27,6 +27,15 @@ const Inner = styled.div`
   margin: 0 auto;
 `
 
+const ShowMore = styled.span`
+  float: right;
+  color: ${props => props.color};
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.25px;
+  line-height: 19px;
+`
+
 class App extends React.Component {
   constructor() {
     super()
@@ -34,7 +43,8 @@ class App extends React.Component {
     this.state = {
       data: [],
       showModal: false,
-      modalIdx: null
+      modalIdx: null,
+      color: '#21ce99'
     }
 
     this.toggleModal = this.toggleModal.bind(this)
@@ -68,7 +78,9 @@ class App extends React.Component {
       <Body>
         <GlobalStyle />
         <Inner>
-        <Title>News</Title>
+        <Title>News
+        <ShowMore color={this.state.color}>Show More</ShowMore>
+        </Title>
         <Container data={this.state.data} modalHandler={this.toggleModal} />
         </Inner>
         {this.state.showModal && (

@@ -6,16 +6,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: "DIN Pro";
     src: url(${path.resolve('./fonts/DINPro-Medium.ttf')}) format('truetype');
   }
-  body {
-    font-family: Arial;
-    width: 750px;
-    margin: auto;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-    line-height: 19px;
-    background-color: #1b1b1d;
-  }
 `
 
 export default GlobalStyle

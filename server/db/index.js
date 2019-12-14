@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://database/news';
+const mongoUri = 'mongodb://localhost/news';
 
 const db = mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
 

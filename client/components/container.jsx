@@ -6,8 +6,8 @@ import { NewsArticle } from './index.js'
 
 const Box = styled.div`
   border-radius: 4px;
-  margin: 0 -30px;
-  padding: 30px;
+  margin: 0 -50px;
+  padding: 50px;
   position: relative;
   transition: background 150ms;
 `

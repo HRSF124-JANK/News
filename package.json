@@ -6,7 +6,7 @@
     "build:watch": "webpack -w -d",
     "build": "webpack",
     "start:dev": "nodemon --inspect=9230 ./server/app.js",
-    "start": "node ./server/app.js",
+    "start": "NODE_ENV=production node ./server/app.js",
     "db:setup": "node -e 'require(\"./server/db/seed.js\")()'",
     "test": "jest --coverage --color",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand"

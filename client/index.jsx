@@ -63,7 +63,6 @@ class App extends React.Component {
         return response.json()
       })
       .then((body) => {
-        console.log(body)
         this.setState({
           data: body
         })
